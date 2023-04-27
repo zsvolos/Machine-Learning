@@ -3,7 +3,6 @@
 
 !pip install git+https://github.com/MattChanTK/gym-maze.git
 
-"""### Test your """
 
 import os
 os.environ["SDL_VIDEODRIVER"] = "dummy"
@@ -31,7 +30,6 @@ plt.show()
 
 In the maze environment, a reward of $1$ is given when the agent reaches the goal. For every step in the maze, the agent recieves a penalty reward of $-0.1/\text{(number of cells)}$. We want to maximize the cumulative returns of the agent over time. One way to define the objective is $ R_N = \frac1N \mathbb{E} \sum_{n=1}^{N} \sum_{t=1}^{T} r_{it} $ where $N$ is the number of episode and each episode has $T$ steps.
 
-Here we apply the famous Q-Learning algorithm to solve it.
 """
 
 num_episodes = 1000
@@ -99,7 +97,6 @@ plt.xlabel('#episode'); plt.ylabel('return')
 plt.show()
 
 """### Double Q-Learning
-We test the Double Q-Learning algorithm (covered in Lecture slide p.38) here.
 """
 
 learning_rate = 0.2
@@ -173,7 +170,7 @@ plt.plot(episode_returns)
 plt.xlabel('#episode'); plt.ylabel('return')
 plt.show()
 
-"""### Visualize the solution"""
+
 
 from IPython import display
 env = gym.make("maze-sample-10x10-v0")
