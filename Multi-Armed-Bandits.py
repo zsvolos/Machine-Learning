@@ -1,8 +1,4 @@
-"""
-To run, try `python3 proj1.py` under the same directory.
-By default, it will generate two files i.e., `data.out` and `figure.pdf`.
-`data.out` stores the regrets and `figure.pdf` is the output figure.
-"""
+
 import os
 from abc import ABC, abstractmethod
 import random
