@@ -2,6 +2,8 @@ import json
 
 from absl import logging
 from absl import flags
+
+import numpy as np
 from matplotlib.collections import PolyCollection
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -85,3 +87,10 @@ def write_to_file(data):
     json.dump(data, f)
     f.write('\n')
     f.flush()
+
+
+def sphere_sampling(dim, samples):
+  v = np.random.normal(size=(samples, dim))
+  return v / np.sqrt(np.sum(v**2, 0))
+
+
